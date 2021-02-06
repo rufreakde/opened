@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.cfg
+opened_rufreakde.egg-info/PKG-INFO
+opened_rufreakde.egg-info/SOURCES.txt
+opened_rufreakde.egg-info/dependency_links.txt
+opened_rufreakde.egg-info/top_level.txt
