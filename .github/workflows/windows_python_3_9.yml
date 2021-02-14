@@ -1,4 +1,4 @@
-name: Python CI
+name: Windows Python 3.9
 
 on:
   push:
