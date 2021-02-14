@@ -4,6 +4,7 @@ from pathlib import Path
 
 
 class opened():
+
     def __init__(self, folderpath: str, filename: str, mode='w', extended=False, dot_root="."):
         self.filehandle = {}
         self.folderpath: str = folderpath
@@ -14,16 +15,17 @@ class opened():
         self.dot_root = dot_root
 
     def handle_relative_Path_beginning(self, folderpath: str) -> str:
-        if self.dot_root is ".":
+        if folderpath == None:
+            raise Exception("Null String found!")
+
+        if self.dot_root == '.':
             return folderpath
 
-        if folderpath[:1] is '..':
+        if folderpath[:2] == '..':
             return f"{self.dot_root}/../{folderpath}"
 
-        if folderpath[0] is '.':
+        if folderpath[0] == ".":
             return f"{self.dot_root}/{folderpath}"
-
-        raise Exception("Unkown String Beginning format found! - opened")
 
     def handle_paths(self, folderpath: str, filename: str) -> str:
         folderpath = self.handle_relative_Path_beginning(folderpath)
