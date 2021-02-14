@@ -6,6 +6,10 @@ on:
       - main
   schedule:
     - cron:  '0 18 * * 5'
+  page_build:
+  release:
+    types: # This configuration does not affect the page_build event above
+      - created
 
 jobs:
   build:
