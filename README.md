@@ -18,6 +18,8 @@ A simple package adding some additional features to [open](https://docs.python.o
 
 ## Example with Temporary directory
 ```py
+import tempfile
+...
 with tempfile.TemporaryDirectory() as temporary_directory:
     with opened('./', self.filename, extended=True, dot_root=temporary_directory) as file:
         print(f"{file.filepath}")
