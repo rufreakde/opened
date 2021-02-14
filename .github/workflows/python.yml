@@ -1,6 +1,9 @@
 name: Python CI
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron:  '0 18 * * 5'
 
