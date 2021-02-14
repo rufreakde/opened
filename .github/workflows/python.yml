@@ -2,13 +2,11 @@ name: Python CI
 
 on:
   push:
-    branches:
-      - main
   schedule:
     - cron:  '0 18 * * 5'
   page_build:
   release:
-    types: # This configuration does not affect the page_build event above
+    types:
       - created
 
 jobs:
